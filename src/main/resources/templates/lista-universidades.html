@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Lista de Universidades</title>
+</head>
+<body>
+<h1>Lista de Universidades</h1>
+<table>
+    <thead>
+    <tr>
+        <th>ID</th>
+        <th>Nombre</th>
+
+    </tr>
+    </thead>
+    <tbody>
+
+    <tr th:each="universidad : ${universidades}">
+        <td th:text="${universidad.id}"></td>
+
+        <td th:text="${universidad.nombre}"></td>
+        <td th:text="${universidad.dirección}"></td>
+        <td th:text="${universidad.ciudad}"></td>
+        <td th:text="${universidad.país}"></td>
+    </tr>
+    </tbody>
+</table>
+</body>
+</html>
